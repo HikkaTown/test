@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/normalize.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Тестовое</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./img/logo.svg" alt="Главная страница" class="header__logo">
+    </header>
+    <div class="modal__video modal__video_hidden">
+        <div class="modal__video-container">
+            <span class="modal__video-close"></span>
+            <iframe class="modal__video-iframe" src="https://www.youtube.com/embed/21qNxnCS8WU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <main>
+        <section class="video">
+            <div class="video__container">
+                <img class="video__previev" src="https://i.ytimg.com/vi/21qNxnCS8WU/hqdefault.jpg" alt="Превью">
+                <img src="./img/play__icon.svg" alt="" class="video__play">
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h1 class="benefits__header"> <span class="benefits__header benefits__header_select">Фото на</span> праздник</h1>
+            <p class="benefits__subtitle">
+                Lorem ipsum dolor sit amet, consectetur <span class="benefits__subtitle benefits__subtitle_select">adipiscing elit</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <ul class="benefits__cards">
+                <li class="benefits__card">
+                    <img src="./img/infinity_icon.svg" alt="Безлимитная печать фото" class="benefits__card-img">
+                    <p class="benefits__card-title">
+                        Безлимитная печать фото
+                    </p>
+                </li>
+                <li class="benefits__card">
+                    <img src="./img/mask_icon.svg" alt="Фотореквизит в наличии" class="benefits__card-img">
+                    <p class="benefits__card-title">
+                        Фотореквизит в наличии
+                    </p>
+                </li>
+                <li class="benefits__card">
+                    <img src="./img/photo_icon.svg" alt="Фотоотчет в электронном виде" class="benefits__card-img">
+                    <p class="benefits__card-title">
+                        Фотоотчет в электронном виде
+                    </p>
+                </li>
+                <li class="benefits__card">
+                    <img src="./img/price_icon.svg" alt="Цены ниже рынка" class="benefits__card-img">
+                    <p class="benefits__card-title">
+                        Цены ниже рынка
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="catalog">
+            <h2 class="catalog__header">Фотобудки</h2>
+            <div class="catalog__content">
+                <article class="catalog__item">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">3 часа</li>
+                        <li class="catalog__rent-item">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+                <article class="catalog__item hidden">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item">3 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+                <article class="catalog__item hidden">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item">3 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+                <article class="catalog__item hidden">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item">3 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+                <article class="catalog__item hidden">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item">3 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+                <article class="catalog__item hidden">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item">3 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+                <article class="catalog__item hidden">
+                    <div class="catalog__slider">
+                        <button  class="catalog__slider-button catalog__slider-button_left"></button>
+                        <div class="catalog__slider-content">
+                            <div class="catalog__slider-item catalog__slider-item_active">
+                                <img src="./img/photo_active.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                            <div class="catalog__slider-item">
+                                <img src="./img/photo-1.jpg" alt="Первое фото" class="catalog__slider-img">
+                            </div>
+                        </div>
+                        <div class="catalog__slider-dots">
+                            <span class="catalog__slider-dot catalog__slider-dot_active"></span>
+                            <span class="catalog__slider-dot"></span>
+                            <span class="catalog__slider-dot"></span>
+                        </div>
+                        <button  class="catalog__slider-button catalog__slider-button_right"></button>
+                    </div>
+                    <p class="catalog__item-header">Фотобудка с ширмой #1</p>
+                    <p class="catalog__item-info">Размер:<span class="catalog__item-params">2м x 1.5м x 2 м</span></p>
+                    <div class="catalog__options">
+                        <p class="catalog__options-header">Доп. опции</p>
+                        <div class="catalog__options-content">
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #1</p>
+                                    <p class="catalog__options-price">2500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #2</p>
+                                    <p class="catalog__options-price">3000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #3</p>
+                                    <p class="catalog__options-price">3500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #4</p>
+                                    <p class="catalog__options-price">4000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #5</p>
+                                    <p class="catalog__options-price">4500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #6</p>
+                                    <p class="catalog__options-price">5000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #7</p>
+                                    <p class="catalog__options-price">5500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #8</p>
+                                    <p class="catalog__options-price">6000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #9</p>
+                                    <p class="catalog__options-price">6500 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                            <div class="catalog__options-item">
+                                <img class="catalog__options-img" src="./img/photo_active.jpg" alt="Пример">
+                                <div class="catalog__options-info">
+                                    <p class="catalog__options-name">Разработка макета #10</p>
+                                    <p class="catalog__options-price">7000 ₽</p>
+                                </div>
+                                <div class="catalog__options-checkbox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="catalog__rent-header">Укажите время аренды</p>
+                    <ul class="catalog__rent-time">
+                        <li class="catalog__rent-item">1 час</li>
+                        <li class="catalog__rent-item">2 часа</li>
+                        <li class="catalog__rent-item">3 часа</li>
+                        <li class="catalog__rent-item catalog__rent-item_active">5 часов</li>
+                        <li class="catalog__rent-item">выставка 2 дня</li>
+                        <li class="catalog__rent-item">выставка 3 дня</li>
+                    </ul>
+                    <div class="catalog__price">
+                        <p class="catalog__amount">17 000 ₽</p>
+                        <button class="catalog__order-btn">Оставить заявку</button>
+                    </div>
+                </article>
+            </div>
+            <button class="catalog__show-more">Показать ещё</button>
+        </section>
+    </main>
+    <div class="modal">
+        <span class="modal__close-icon"></span>
+        <h3 class="modal__header">Ваша заявка</h3>
+        <form class="modal__form">
+            <div class="modal__row">
+                <div class="modal__info">
+                    <p class="modal__info-name">Фотобудка с ширмой</p>
+                    <p class="modal__info-params">Размер: <span class="modal__info-data">2м x 1.5м x 2 м</span></p>
+                    <div class="modal__customSelect"><span class="modal__info-time">3 дня</span><span class="modal__info-customIcon"></span></div>
+                </div>
+                <p class="modal__info-cost">17 000 ₽</p>
+            </div>
+            <ul class="modal__options">
+            </ul>
+            <p class="modal__total">Итого: <span class="modal__total-amount">23 000 ₽</span></p>
+            <div class="modal__row-input">
+                <input type="text" name="phone" class="modal__input" placeholder="+7 (000) 000 00 00"> <div class="modal__custom-callback">Позвонить мне<span class="model__callback-icon"></span></div>
+            </div>
+            <button class="modal__submit" type="submit">Отправить заявку</button>
+        </form>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
