@@ -130,6 +130,12 @@ const changeSlide = (
     }
   }
 };
+
+document.querySelector('.modal__submit').addEventListener('click', (e) => {
+    e.preventDefault();
+    handleModal(document.querySelector('.modal', ''))
+})
+
 // отвечает за закрытие открытие модального окна
 const handleModal = (modal, card) => {
   modal.classList.toggle("modal_active");
@@ -229,6 +235,9 @@ function initCardsHandler(item) {
 
   catalogRentTime.addEventListener("click", (e) => {
     if (e.target.classList.contains("catalog__rent-item")) {
+      if (e.target.classList.contains('catalog__rent-item_active')) {
+          return 0;
+      }
       e.target.classList.toggle("catalog__rent-item_active");
       const rentItem = catalogRentTime.querySelectorAll(".catalog__rent-item");
       rentItem.forEach((item) => {
