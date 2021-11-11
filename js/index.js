@@ -8,10 +8,15 @@ const showMore = document.querySelector('.catalog__show-more');
 const videoModal = document.querySelector('.modal__video')
 const videoCloseBtn = document.querySelector('.modal__video-close');
 const videoPlay = document.querySelector('.video__play');
+const modalIframe = document.querySelector('.modal__video-iframe');
+const linkIframeVideo = 'https://www.youtube.com/embed/21qNxnCS8WU?controls=0'
 
 const handlerVideoModal = (e) => {
     e.preventDefault()
     videoModal.classList.toggle('modal__video_hidden');
+    if(!videoModal.classList.contains('modal__video_hidden')) {
+        modalIframe.src = linkIframeVideo
+    }
 }
 
 videoCloseBtn.addEventListener('click', handlerVideoModal);
