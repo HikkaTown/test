@@ -131,7 +131,7 @@ const changeSlide = (
   }
 };
 
-document.querySelector('.modal__submit').addEventListener('click', (e) => {
+document.querySelector('.modal__form').addEventListener('submit', (e) => {
     e.preventDefault();
     handleModal(document.querySelector('.modal', ''))
 })
