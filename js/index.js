@@ -16,9 +16,10 @@ const handlerVideoModal = (e) => {
   videoModal.classList.toggle("modal__video_hidden");
   if (!videoModal.classList.contains("modal__video_hidden")) {
     modalIframe.src = linkIframeVideo;
-
+    document.querySelector("body").style.overflow = "hidden";
   } else {
     modalIframe.src = '';
+    document.querySelector("body").style.overflow = "unset";
   }
 };
 

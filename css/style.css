@@ -118,6 +118,9 @@
     height: 188px;
     object-fit: cover;
     border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/video-previev.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   /* Benefits */
