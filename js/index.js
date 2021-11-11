@@ -16,6 +16,9 @@ const handlerVideoModal = (e) => {
   videoModal.classList.toggle("modal__video_hidden");
   if (!videoModal.classList.contains("modal__video_hidden")) {
     modalIframe.src = linkIframeVideo;
+
+  } else {
+    modalIframe.src = '';
   }
 };
 
