@@ -1,0 +1,64 @@
+.select {
+    position: relative;
+}
+
+.select_is-active .select__body {
+    display: block;
+}
+
+.select_is-active .select__header {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.select__header {
+    display: flex;
+    border: 1px solid #D5DAE0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 4px 8px;
+    align-items: center;
+}
+
+.select__current {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #131313;
+}
+
+.select__icon {
+    width: 16px;
+    height: 16px;
+    background: url("../img/arrow_icon.svg") no-repeat center center;
+    background-size: 16px 16px;
+    margin-left: auto;
+}
+
+.select__body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #D5DAE0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    background-color: #fff;
+    display: none;
+}
+
+.select__item {
+    font-size: 16px;
+    line-height: 24px;
+    color: #131313;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.select__item:hover {
+    background-color: #f2f2f2;
+}

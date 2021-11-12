@@ -1,3 +1,11 @@
+var rentAmount = {
+  '1 час': 2000,
+  '2 часа': 4000,
+  '3 часа': 6000,
+  '5 часов': 10000,
+  'выставка 2 дня': 13000,
+  'выставка 3 дня': 17000
+}
 const modal = document.querySelector(".modal");
 const modalCloseBtn = modal.querySelector(".modal__close-icon");
 const sliders = document.querySelectorAll(".catalog__slider");
@@ -138,12 +146,20 @@ document.querySelector('.modal__form').addEventListener('submit', (e) => {
 
 // отвечает за закрытие открытие модального окна
 const handleModal = (modal, card) => {
+
   modal.classList.toggle("modal_active");
   if (modal.classList.contains("modal_active")) {
     document.querySelector("body").style.overflow = "hidden";
+    let rent;
+    Object.keys(rentAmount).map((key) => {
+      if(card.querySelector(".catalog__rent-item_active").textContent === key) {
+        rent = rentAmount[key];
+      }
+    })
     const obj = {
       nameCard: card.querySelector(".catalog__item-header").textContent,
       params: card.querySelector(".catalog__item-params").textContent,
+      rentTimePrice: 15000 + rent,
       optionsList: Array.from(
         card.querySelectorAll(".catalog__options-item")
       ).filter((item) => {
@@ -155,6 +171,10 @@ const handleModal = (modal, card) => {
     setSettingsModal(modal, obj);
   } else {
     document.querySelector("body").style.overflow = "unset";
+    const select = document.querySelector('.select_is-active')
+    if(select) {
+      select.classList.remove('select_is-active');
+    }
     setSettingsModal(modal, {
       nameCard: "",
       params: "",
@@ -169,13 +189,13 @@ const setSettingsModal = (modal, params) => {
   const modalName = modal.querySelector(".modal__info-name");
   const modalInfo = modal.querySelector(".modal__info-data");
   const modalInfoCost = modal.querySelector(".modal__info-cost");
-  const customSelect = modal.querySelector(".modal__info-time");
+  const customSelect = modal.querySelector(".select__current");
   const modalOptions = modal.querySelector(".modal__options");
   const modalTotalPrice = modal.querySelector(".modal__total-amount");
   modalName.textContent = params.nameCard;
   modalInfo.textContent = params.params;
   customSelect.textContent = params.rentTime;
-  modalInfoCost.textContent = "17 000 ₽";
+  modalInfoCost.textContent = params.rentTimePrice + ' Р';
   modalTotalPrice.textContent = params.totalPrice;
   if (params.optionsList.length) {
     params.optionsList.forEach((item) => {
@@ -233,23 +253,43 @@ function initCardsHandler(item) {
     }
   });
 
-  catalogRentTime.addEventListener("click", (e) => {
-    if (e.target.classList.contains("catalog__rent-item")) {
-      if (e.target.classList.contains('catalog__rent-item_active')) {
-          return 0;
-      }
-      e.target.classList.toggle("catalog__rent-item_active");
-      const rentItem = catalogRentTime.querySelectorAll(".catalog__rent-item");
-      rentItem.forEach((item) => {
-        if (
-          item !== e.target &&
-          item.classList.contains("catalog__rent-item_active")
-        ) {
-          item.classList.remove("catalog__rent-item_active");
+  const changeAmountCard = (itemText, value) => {
+    var activeAmount = +catalogAmount.textContent.replace(/[^0-9]/g, "");
+    if(value === 'add') {
+      Object.keys(rentAmount).map((key) => {
+        if(key === itemText) {
+          activeAmount = activeAmount + rentAmount[itemText];
+          catalogAmount.textContent = activeAmount + " ₽";
+        }
+      });
+    } else if ( value === 'delete'){
+      Object.keys(rentAmount).map((key) => {
+        if(key === itemText) {
+          activeAmount = activeAmount - rentAmount[itemText];
+          catalogAmount.textContent = activeAmount + " ₽";
         }
       });
     }
-  });
+  }
+
+  catalogRentTime.addEventListener('click', (e) => {
+    if (e.target.classList.contains('catalog__rent-item')) {
+      if(!e.target.classList.contains('catalog__rent-item_active')) {
+        const rentItem = catalogRentTime.querySelectorAll(".catalog__rent-item");
+        rentItem.forEach((item) => {
+          if ( item !== e.target && item.classList.contains("catalog__rent-item_active") ) {
+            changeAmountCard(item.textContent, 'delete')
+            item.classList.remove("catalog__rent-item_active");
+          } else if ( item === e.target && !item.classList.contains('catalog__rent-item_active') ){
+            changeAmountCard(item.textContent, 'add');
+            item.classList.add("catalog__rent-item_active");
+          }
+        });
+      }
+    }
+  })
+
+  changeAmountCard(item.querySelector('.catalog__rent-item_active').textContent, 'add');
 
   catalogBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -307,3 +347,46 @@ const mask = (selector) => {
 };
 
 mask('[name="phone"]');
+
+
+
+
+let select = function () {
+  let selectHeader = document.querySelectorAll('.select__header');
+  let selectItem = document.querySelectorAll('.select__item');
+  selectHeader.forEach((item) => {
+    item.addEventListener('click', selectToggle);
+  })
+
+  let currentAmount;
+
+  selectItem.forEach((item) => {
+    item.addEventListener('click', selectChoose);
+  });
+
+  function selectToggle() {
+    currentAmount = this.querySelector('.select__current').textContent;
+    this.parentElement.classList.toggle('select_is-active');
+  }
+
+  function selectChoose() {
+    let text = this.textContent;
+    let select = this.closest('.select');
+    let currentText = select.querySelector('.select__current');
+    if(this.closest('.select__rent-time')) {
+      const modalPrice = document.querySelector('.modal__total-amount');
+      const modalItemCost = document.querySelector('.modal__info-cost')
+      Object.keys(rentAmount).map((key) => {
+        if(key === text) {
+          modalPrice.textContent = modalPrice.textContent.replace(/[^0-9]/g, "") - rentAmount[currentAmount] + rentAmount[text] + ' ₽';
+          modalItemCost.textContent = +modalItemCost.textContent.replace(/[^0-9]/g, "") - rentAmount[currentAmount] + rentAmount[text] + ' ₽';
+        }
+      })
+    }
+    currentText.textContent = text;
+    select.classList.remove('select_is-active');
+    
+  }
+};
+
+select();
